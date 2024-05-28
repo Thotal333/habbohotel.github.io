@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Habbo Hotel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="/image/Habbo-Symbol.png">
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="image/Habbo-Symbol.png" alt=""> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="#home" class="nav-link">Início</a> </li>
+          <li> <a href="#about" class="nav-link">Sobre</a> </li>
+          <li> <a href="#rooms" class="nav-link">Quartos</a> </li>
+          <li> <a href="#restaurant" class="nav-link">Restaurante</a> </li>
+          <li> <a href="#gallery" class="nav-link">Galeria</a> </li>
+          <li> <a href="#contact" class="nav-link">Contato</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>Seja Bem-vindo ao HABBO HOTEL</h1>
+          <p>O Habbo Hotel é uma comunidade virtual de pixels onde você pode criar seu próprio avatar, fazer amigos, bater papo, construir quartos, desenvolver seus próprios jogos e jogá-los e muito mais! Quase tudo é possível nesse lugar tão diferente, com gente incrível… </p>
+          <button>Saiba mais</button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="image/home1.jpg" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="image/home1.jpg" alt="" class="slide active" onclick="img('image/home1.jpg')">
+        <img src="image/home2.jpg" alt="" class="slide" onclick="img('image/home2.jpg')">
+        <img src="image/home3.jpg" alt="" class="slide" onclick="img('image/home3.jpg')">
+        <img src="image/home4.jpg" alt="" class="slide" onclick="img('image/home4.jpg')">
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+  <section class="book">
+    <div class="container flex">
+      <div class="input grid">
+        <div class="box">
+          <label>Check-in:</label>
+          <input type="date" placeholder="Check-in-Date">
+        </div>
+        <div class="box">
+          <label>Check-out:</label>
+          <input type="date" placeholder="Check-out-Date">
+        </div>
+        <div class="box">
+          <label>Adultos:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+        <div class="box">
+          <label>Crianças:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+      </div>
+      <div class="search">
+        <input type="submit" value="Procurar">
+      </div>
+    </div>
+  </section>
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="image/a1.jpg" alt="" class="image1">
+          <img src="image/a2.jpg" alt="" class="image2">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>ELEVANDO O CONFORTO AO NÍVEL MAIS ALTO</h5>
+          <h2>Bem vindo ao East Hotel Resort</h2>
+          <p>Trata-se de hotel de grande capacidade para hospedar grandes grupos de excursionistas. Sua estrutura é muito boa, contando com varias piscinas, spa, sala de ginastica com aparelhos modernos. Os quartos são de bom tamanho, banheiro moderno, silenciosos e com vista para o Mar Morto. </p>
+
+          <button class="btn1">Saiba mais</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper top">
+    <div class="container">
+      <div class="text">
+        <h2>Nossas comodidades</h2>
+        <p>Os hóspedes têm acesso a várias comodidades, a exemplo de serviço de quarto e concierge, durante a estadia no Grand East Hotel - Resort & Spa Dead Sea. Além disso, o Grand East Hotel - Resort & Spa Dead Sea oferece piscina e café da manhã, o que vai tornar sua viagem a Sweimah ainda mais gratificante.</p>
+        <div class="content">
+          <div class="box flex">
+            <i class="fas fa-swimming-pool"></i>
+            <span>Piscina</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-dumbbell"></i>
+            <span>Academia e Yoga</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-spa"></i>
+            <span>Spa e massagem</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-ship"></i>
+            <span>Passeios de barco</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-swimmer"></i>
+            <span>Aulas de surf</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-microphone"></i>
+            <span>Sala de conferencia</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-water"></i>
+            <span>Mergulho</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-umbrella-beach"></i>
+            <span>Praia privada</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="room top" id="room">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>ELEVANDO O CONFORTO AO NÍVEL MAIS ALTO</h5>
+          <h2>Quartos e Suites</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">Saiba mais</button>
+        </div>
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="image/r1.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Quartos Bronze</h3>
+            <p> <span>R$</span>129 <span>/por noite</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r2.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Quartos Silver</h3>
+            <p> <span>R$</span>355 <span>/por noite</span> </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="image/r3.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Quartos Gold</h3>
+            <p> <span>R$</span>559 <span>/por noite</span> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper wrapper2 top">
+    <div class="container">
+      <div class="text">
+        <div class="heading">
+          <h5>Avaliações</h5>
+          <h2>O'que as Pessoas dizem</h2>
+        </div>
+
+        <div class="para">
+          <p>Eu fui ela na semana passada em um ótimo hotel, estou realmente muito feliz com tudo
+            Os quartos eram super limpos, bem conservados e bem arrumados, super limpeza do banheiro, é até 5 estrelas, a comida do hotel era boa
+            Piscinas fantásticas tem com o melhor atendimento de toda equipe
+            Muito obrigado a toda equipe</p>
+
+          <div class="box flex">
+            <div class="img">
+              <img src="image/kauanzin.png" alt="">
+            </div>
+            <div class="name">
+              <h5>Kauã</h5>
+              <h5>Nobre</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="restaurant top" id="restaurant">
+    <div class="container flex">
+      <div class="left">
+        <img src="image/re.jpg" alt="">
+      </div>
+      <div class="right">
+        <div class="text">
+          <h2>Nosso Restaurante</h2>
+          <p>Restaurantes com ótima localização incluem Oak Tree Kitchen, Rehan Lebanese Cuisine e Burj Al Hamam.</p>
+        </div>
+        <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">
+                Gastronomia Italiana</h2>
+            <div class="accordionItemContent">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Gastronomia Mexicana</h2>
+            <div class="accordionItemContent">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Gastronomia Japonesa</h2>
+            <div class="accordionItemContent">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Gastronomia Francesa</h2>
+            <div class="accordionItemContent">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+
+
+
+  <section class="gallary mtop " id="gallary">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>BEM-VINDO À NOSSA GALERIA DE FOTOS</h5>
+          <h2>
+            Galeria de Fotos do Nosso Hotel</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">VEJA A GALERIA</button>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="image/g1.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g3.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g4.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g5.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g6.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g7.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="image/g8.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+
+  <section class="map top">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14131.036667732067!2d85.32395955!3d27.69383745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1637755481449!5m2!1sen!2snp" width="600" height="450" style="border:0;"
+      allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+
+  <footer>
+    <div class="container grid top">
+      <div class="box">
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" />
+        <p>Esta é a versão do nosso site para quem fala Português em Brasil. Se você mora em outro lugar, selecione a versão apropriada do HABBO para seu país ou região no menu suspenso.</p>
+
+        <p>Métodos de pagamento aceitos</p>
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+          <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Notícias recentes</h3>
+
+        <ul>
+          <li>Nosso passeio de barco pela ilha secreta é só para você</li>
+          <li>
+            Relaxe e fuja em nossos abrigos naturais</li>
+          <li>Setembro no Habbo Hotel</li>
+          <li>Concertos de música ao vivo no Habbo</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>
+            Para clientes</h3>
+        <ul>
+          <li>Sobre Habbo Hotel</li>
+          <li>Atendimento/Ajuda ao Cliente</li>
+          <li>
+            Contas Corporativas</li>
+          <li>Informação financeira</li>
+          <li>Termos e Condições</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>
+            Contate-nos</h3>
+
+        <ul>
+          <li> Rua Isabel Schmidt, 349 - Santo Amaro, São Paulo - SP, 04743-030</li>
+          <li><i class="far fa-envelope"></i> habbohotel@gmail.com </li>
+          <li><i class="far fa-phone-alt"></i> 11 999 4545 </li>
+          <li><i class="far fa-phone-alt"></i> 11 999 4040 </li>
+          
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
